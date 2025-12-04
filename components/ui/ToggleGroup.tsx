@@ -53,7 +53,7 @@ export function ToggleGroup({
                         whileTap={{ scale: 0.95 }}
                         onClick={() => handleSelect(option.value)}
                         className={cn(
-                            "px-3 py-1.5 rounded-md text-sm font-medium transition-all duration-200 border",
+                            "px-3 py-1.5 rounded-md text-sm font-medium transition-all duration-200 cursor-pointer active:scale-95 border",
                             selected
                                 ? "bg-blue-600 text-white border-blue-500 shadow-[0_0_10px_rgba(37,99,235,0.4)]"
                                 : "bg-slate-800/50 text-slate-400 border-slate-700 hover:bg-slate-700 hover:text-slate-200"

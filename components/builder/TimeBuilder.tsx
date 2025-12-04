@@ -54,7 +54,7 @@ export function TimeBuilder({ seconds, minutes, hours, includeSeconds, onChange 
                             key={mode}
                             onClick={() => updateMode(mode)}
                             className={cn(
-                                "text-sm font-medium px-3 py-1.5 rounded-md transition-colors",
+                                "text-sm font-medium px-3 py-1.5 rounded-md transition-colors cursor-pointer active:scale-95",
                                 state.mode === mode
                                     ? "bg-blue-600/20 text-blue-400 border border-blue-500/30"
                                     : "text-slate-400 hover:text-slate-200"
@@ -156,7 +156,7 @@ export function TimeBuilder({ seconds, minutes, hours, includeSeconds, onChange 
                     <button
                         onClick={() => setActiveTab("seconds")}
                         className={cn(
-                            "px-4 py-1.5 rounded-md text-sm font-medium transition-all",
+                            "px-4 py-1.5 rounded-md text-sm font-medium transition-all cursor-pointer active:scale-95",
                             activeTab === "seconds"
                                 ? "bg-blue-600 text-white shadow-lg"
                                 : "text-slate-400 hover:text-slate-200"
@@ -168,7 +168,7 @@ export function TimeBuilder({ seconds, minutes, hours, includeSeconds, onChange 
                 <button
                     onClick={() => setActiveTab("minutes")}
                     className={cn(
-                        "px-4 py-1.5 rounded-md text-sm font-medium transition-all",
+                        "px-4 py-1.5 rounded-md text-sm font-medium transition-all cursor-pointer active:scale-95",
                         activeTab === "minutes"
                             ? "bg-blue-600 text-white shadow-lg"
                             : "text-slate-400 hover:text-slate-200"
@@ -179,7 +179,7 @@ export function TimeBuilder({ seconds, minutes, hours, includeSeconds, onChange 
                 <button
                     onClick={() => setActiveTab("hours")}
                     className={cn(
-                        "px-4 py-1.5 rounded-md text-sm font-medium transition-all",
+                        "px-4 py-1.5 rounded-md text-sm font-medium transition-all cursor-pointer active:scale-95",
                         activeTab === "hours"
                             ? "bg-blue-600 text-white shadow-lg"
                             : "text-slate-400 hover:text-slate-200"

@@ -33,7 +33,7 @@ export function NeonButton({
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
             className={cn(
-                "relative rounded-lg border font-medium transition-colors duration-200",
+                "relative rounded-lg border font-medium transition-colors duration-200 cursor-pointer active:scale-95",
                 "flex items-center justify-center gap-2",
                 variants[variant],
                 sizes[size],
