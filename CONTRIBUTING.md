@@ -7,7 +7,7 @@ Thank you for your interest in contributing to CronCraft! We welcome contributio
 1.  **Fork the repository** on GitHub.
 2.  **Clone your fork** locally:
     ```bash
-    git clone https://github.com/your-username/cron-craft.git
+    git clone https://github.com/rabinarayanpatra/cron-craft.git
     cd cron-craft
     ```
 3.  **Install dependencies**:

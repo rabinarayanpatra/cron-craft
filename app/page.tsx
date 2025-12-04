@@ -102,7 +102,7 @@ export default function Home() {
                 ⌘K
               </span>
             </NeonButton>
-            <NeonButton variant="ghost" size="sm" onClick={() => window.open('https://github.com', '_blank')}>
+            <NeonButton variant="ghost" size="sm" onClick={() => window.open('https://github.com/rabinarayanpatra/cron-craft', '_blank')}>
               GitHub
             </NeonButton>
           </div>
