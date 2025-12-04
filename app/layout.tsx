@@ -13,8 +13,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Cron Hub - Visual Cron Expression Generator",
-  description: "Build, parse, and understand cron schedules with a modern, visual interface.",
+  title: "CronCraft - Visual Cron Generator",
+  description: "A modern, visual cron expression generator and scheduler.",
 };
 
 export default function RootLayout({

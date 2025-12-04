@@ -1,10 +1,10 @@
-# Cron Hub
+# CronCraft
 
 **The Ultimate Visual Cron Expression Generator.**
 
-Cron Hub is a modern, developer-friendly tool for generating and verifying cron expressions. Built with a focus on aesthetics and usability, it features a stunning "Electric Midnight" theme, glassmorphism UI, and advanced features like natural language search.
+CronCraft is a modern, developer-friendly tool for generating and verifying cron expressions. Built with a focus on aesthetics and usability, it features a stunning "Electric Midnight" theme, glassmorphism UI, and advanced features like natural language search.
 
-![Cron Hub Preview](https://via.placeholder.com/1200x600/0f172a/3b82f6?text=Cron+Hub+Preview)
+![CronCraft Preview](https://via.placeholder.com/1200x600/0f172a/3b82f6?text=CronCraft+Preview)
 
 ## Features
 

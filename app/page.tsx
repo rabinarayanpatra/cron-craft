@@ -82,7 +82,7 @@ export default function Home() {
             </div>
             <div>
               <h1 className="text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-violet-400">
-                Cron Hub
+                CronCraft
               </h1>
               <p className="text-slate-500 text-sm">
                 Visual Cron Expression Generator
@@ -195,7 +195,7 @@ export default function Home() {
 
         {/* Footer */}
         <footer className="text-center text-slate-600 text-sm pt-8 border-t border-white/5">
-          <p>© {new Date().getFullYear()} Cron Hub. Built with Next.js 16 & Tailwind v4.</p>
+          <p>© {new Date().getFullYear()} CronCraft. Built with Next.js 16 & Tailwind v4.</p>
         </footer>
 
         {/* Command Dialog */}
