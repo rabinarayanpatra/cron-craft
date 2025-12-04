@@ -4,7 +4,7 @@
 
 CronCraft is a modern, developer-friendly tool for generating and verifying cron expressions. Built with a focus on aesthetics and usability, it features a stunning "Electric Midnight" theme, glassmorphism UI, and advanced features like natural language search.
 
-![CronCraft Preview](/preview.png)
+![CronCraft Preview](https://raw.githubusercontent.com/rabinarayanpatra/cron-craft/main/public/preview.png)
 
 ## Features
 
