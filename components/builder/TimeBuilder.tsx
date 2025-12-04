@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import { GlassCard } from "@/components/ui/GlassCard";
 import { ToggleGroup } from "@/components/ui/ToggleGroup";
@@ -8,16 +8,25 @@ import { CronPartState, CronMode } from "@/hooks/useCron";
 import { cn } from "@/lib/utils";
 
 interface TimeBuilderProps {
+    seconds?: CronPartState;
     minutes: CronPartState;
     hours: CronPartState;
-    onChange: (type: "minutes" | "hours", newState: CronPartState) => void;
+    includeSeconds: boolean;
+    onChange: (type: "seconds" | "minutes" | "hours", newState: CronPartState) => void;
 }
 
-export function TimeBuilder({ minutes, hours, onChange }: TimeBuilderProps) {
-    const [activeTab, setActiveTab] = useState<"minutes" | "hours">("minutes");
+export function TimeBuilder({ seconds, minutes, hours, includeSeconds, onChange }: TimeBuilderProps) {
+    const [activeTab, setActiveTab] = useState<"seconds" | "minutes" | "hours">("minutes");
+
+    // Reset to minutes if seconds is disabled and we are on seconds tab
+    useEffect(() => {
+        if (!includeSeconds && activeTab === "seconds") {
+            setActiveTab("minutes");
+        }
+    }, [includeSeconds, activeTab]);
 
     const renderControls = (
-        type: "minutes" | "hours",
+        type: "seconds" | "minutes" | "hours",
         state: CronPartState,
         maxVal: number
     ) => {
@@ -66,7 +75,7 @@ export function TimeBuilder({ minutes, hours, onChange }: TimeBuilderProps) {
                     >
                         {state.mode === "every" && (
                             <p className="text-slate-400">
-                                Runs every {type === "minutes" ? "minute" : "hour"}. (*)
+                                Runs every {type === "seconds" ? "second" : type === "minutes" ? "minute" : "hour"}. (*)
                             </p>
                         )}
 
@@ -82,7 +91,7 @@ export function TimeBuilder({ minutes, hours, onChange }: TimeBuilderProps) {
                                     className="bg-slate-800 border border-slate-700 rounded px-2 py-1 w-20 text-center focus:border-blue-500 outline-none"
                                 />
                                 <span className="text-slate-300">
-                                    {type === "minutes" ? "minute(s)" : "hour(s)"}
+                                    {type === "seconds" ? "second(s)" : type === "minutes" ? "minute(s)" : "hour(s)"}
                                 </span>
                             </div>
                         )}
@@ -143,6 +152,19 @@ export function TimeBuilder({ minutes, hours, onChange }: TimeBuilderProps) {
     return (
         <GlassCard className="w-full" title="Time Configuration">
             <div className="flex gap-2 mb-6 bg-slate-900/50 p-1 rounded-lg w-fit">
+                {includeSeconds && (
+                    <button
+                        onClick={() => setActiveTab("seconds")}
+                        className={cn(
+                            "px-4 py-1.5 rounded-md text-sm font-medium transition-all",
+                            activeTab === "seconds"
+                                ? "bg-blue-600 text-white shadow-lg"
+                                : "text-slate-400 hover:text-slate-200"
+                        )}
+                    >
+                        Seconds
+                    </button>
+                )}
                 <button
                     onClick={() => setActiveTab("minutes")}
                     className={cn(
@@ -175,9 +197,9 @@ export function TimeBuilder({ minutes, hours, onChange }: TimeBuilderProps) {
                     exit={{ opacity: 0, x: -20 }}
                     transition={{ duration: 0.2 }}
                 >
-                    {activeTab === "minutes"
-                        ? renderControls("minutes", minutes, 59)
-                        : renderControls("hours", hours, 23)}
+                    {activeTab === "seconds" && seconds && renderControls("seconds", seconds, 59)}
+                    {activeTab === "minutes" && renderControls("minutes", minutes, 59)}
+                    {activeTab === "hours" && renderControls("hours", hours, 23)}
                 </motion.div>
             </AnimatePresence>
         </GlassCard>

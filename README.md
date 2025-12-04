@@ -1,4 +1,30 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Cron Hub
+
+**The Ultimate Visual Cron Expression Generator.**
+
+Cron Hub is a modern, developer-friendly tool for generating and verifying cron expressions. Built with a focus on aesthetics and usability, it features a stunning "Electric Midnight" theme, glassmorphism UI, and advanced features like natural language search.
+
+![Cron Hub Preview](https://via.placeholder.com/1200x600/0f172a/3b82f6?text=Cron+Hub+Preview)
+
+## Features
+
+-   **Visual Builder**: Intuitive interface to configure Minutes, Hours, Days, Months, and Weekdays.
+-   **Seconds Support**: Toggle support for 6-part cron expressions (including seconds).
+-   **Bidirectional Syncing**: Type a cron string to update the UI, or use the UI to update the string.
+-   **Natural Language Search**: Press `Cmd+K` to search for presets like "every 5 minutes" or "daily".
+-   **Live Preview**: See the human-readable description and the next 5 scheduled run times instantly.
+-   **Quick Presets**: One-click access to common cron schedules.
+-   **Modern UI**: Built with Tailwind CSS v4, Motion, and Glassmorphism effects.
+
+## Tech Stack
+
+-   **Framework**: [Next.js 16](https://nextjs.org/) (App Router)
+-   **Language**: [TypeScript](https://www.typescriptlang.org/)
+-   **Styling**: [Tailwind CSS v4](https://tailwindcss.com/)
+-   **Animations**: [Motion](https://motion.dev/) (formerly Framer Motion)
+-   **Icons**: [Lucide React](https://lucide.dev/)
+-   **Utilities**: `clsx`, `tailwind-merge`, `cmdk`, `@radix-ui`
+-   **Cron Logic**: `cron-parser`, `cronstrue`
 
 ## Getting Started
 
@@ -16,21 +42,10 @@ bun dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Contributing
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Contributions are welcome! Please read our [Contributing Guidelines](CONTRIBUTING.md) for details on how to submit pull requests, report issues, and contribute to the project.
 
-## Learn More
+## License
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
