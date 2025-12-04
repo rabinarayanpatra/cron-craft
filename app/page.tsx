@@ -163,8 +163,9 @@ export default function Home() {
                   <motion.button
                     key={preset.label}
                     whileHover={{ x: 4 }}
+                    whileTap={{ scale: 0.98 }}
                     onClick={() => updateCronString(preset.value)}
-                    className="flex items-center justify-between p-3 rounded-lg bg-white/5 hover:bg-white/10 border border-white/5 transition-all group text-left"
+                    className="flex items-center justify-between p-3 rounded-lg bg-white/5 hover:bg-white/10 border border-white/5 transition-all group text-left cursor-pointer active:scale-98"
                   >
                     <span className="text-sm font-medium text-slate-300 group-hover:text-white">
                       {preset.label}
@@ -174,7 +175,7 @@ export default function Home() {
                 ))}
                 <button
                   onClick={() => setOpen(true)}
-                  className="w-full mt-2 text-xs text-center text-slate-500 hover:text-blue-400 transition-colors"
+                  className="w-full mt-2 text-xs text-center text-slate-500 hover:text-blue-400 transition-colors cursor-pointer"
                 >
                   View all presets (⌘K)
                 </button>

@@ -54,7 +54,7 @@ export function DateBuilder({ dom, month, dow, onChange }: DateBuilderProps) {
                             key={mode}
                             onClick={() => updateMode(mode)}
                             className={cn(
-                                "text-sm font-medium px-3 py-1.5 rounded-md transition-colors",
+                                "text-sm font-medium px-3 py-1.5 rounded-md transition-colors cursor-pointer active:scale-95",
                                 state.mode === mode
                                     ? "bg-blue-600/20 text-blue-400 border border-blue-500/30"
                                     : "text-slate-400 hover:text-slate-200"
@@ -190,7 +190,7 @@ export function DateBuilder({ dom, month, dow, onChange }: DateBuilderProps) {
                 <button
                     onClick={() => setActiveTab("dom")}
                     className={cn(
-                        "px-4 py-1.5 rounded-md text-sm font-medium transition-all",
+                        "px-4 py-1.5 rounded-md text-sm font-medium transition-all cursor-pointer active:scale-95",
                         activeTab === "dom"
                             ? "bg-blue-600 text-white shadow-lg"
                             : "text-slate-400 hover:text-slate-200"
@@ -201,7 +201,7 @@ export function DateBuilder({ dom, month, dow, onChange }: DateBuilderProps) {
                 <button
                     onClick={() => setActiveTab("month")}
                     className={cn(
-                        "px-4 py-1.5 rounded-md text-sm font-medium transition-all",
+                        "px-4 py-1.5 rounded-md text-sm font-medium transition-all cursor-pointer active:scale-95",
                         activeTab === "month"
                             ? "bg-blue-600 text-white shadow-lg"
                             : "text-slate-400 hover:text-slate-200"
@@ -212,7 +212,7 @@ export function DateBuilder({ dom, month, dow, onChange }: DateBuilderProps) {
                 <button
                     onClick={() => setActiveTab("dow")}
                     className={cn(
-                        "px-4 py-1.5 rounded-md text-sm font-medium transition-all",
+                        "px-4 py-1.5 rounded-md text-sm font-medium transition-all cursor-pointer active:scale-95",
                         activeTab === "dow"
                             ? "bg-blue-600 text-white shadow-lg"
                             : "text-slate-400 hover:text-slate-200"
